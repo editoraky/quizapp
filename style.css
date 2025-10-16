@@ -24,3 +24,12 @@ body {
     align-items: center;
     padding-top: 10px;
 }
+
+.quiz_answer_card:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bg-success, .bg-danger {
+    color: white;
+}

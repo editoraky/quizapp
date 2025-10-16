@@ -31,22 +31,22 @@
             <div class="card-body">
                 <h5 id="questiontext" class="card-title">Frage</h5>
                 
-                <div class="card mb-2">
+                <div class="card quiz_answer_card mb-2" onclick="answer('answer_1')">
                     <div id="answer_1" class="card_body">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2">
+                <div class="card quiz_answer_card mb-2" onclick="answer('answer_2')">
                     <div id="answer_2" class="card_body">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2">
+                <div class="card quiz_answer_card mb-2" onclick="answer('answer_3')">
                     <div id="answer_3" class="card_body">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2">
+                <div class="card quiz_answer_card mb-2" onclick="answer('answer_4')">
                     <div id="answer_4" class="card_body">
                         Antwort
                     </div>
@@ -57,7 +57,7 @@
                             <b>1</b> von <b id="all_questions">5</b> Fragen
                         </span>
 
-                        <button type="button" class="btn btn-primary">Nächste Frage</button>
+                        <button onclick="nextQuestion()" type="button" class="btn btn-primary" id="next_button" disabled>Nächste Frage</button>
                     </div>
 
             </div>

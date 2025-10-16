@@ -1,338 +1,49 @@
 let quiz_questions = [
   {
-    question: "In which century was Shakespeare born?",
-    answer_1: "15th century",
-    answer_2: "16th century",
-    answer_3: "17th century",
-    answer_4: "14th century",
-    right_answer: 2,
+    "question": "In which century was Shakespeare born?",
+    "answer_1": "15th century",
+    "answer_2": "16th century",
+    "answer_3": "17th century",
+    "answer_4": "14th century",
+    "right_answer": 2,
   },
   {
-    question: "Who wrote the novel 'The Trial'?",
-    answer_1: "Thomas Mann",
-    answer_2: "Franz Kafka",
-    answer_3: "Hermann Hesse",
-    answer_4: "Bertolt Brecht",
-    right_answer: 2,
+    "question": "Who wrote the novel 'The Trial'?",
+    "answer_1": "Thomas Mann",
+    "answer_2": "Franz Kafka",
+    "answer_3": "Hermann Hesse",
+    "answer_4": "Bertolt Brecht",
+    "right_answer": 2,
   },
   {
-    question:
+    "question":
       "Which literary device involves giving human characteristics to non-human things?",
-    answer_1: "Metaphor",
-    answer_2: "Simile",
-    answer_3: "Personification",
-    answer_4: "Alliteration",
-    right_answer: 3,
-  },
-  {
-    question: "Which author wrote 'One Hundred Years of Solitude'?",
-    answer_1: "Isabel Allende",
-    answer_2: "Pablo Neruda",
-    answer_3: "Gabriel García Márquez",
-    answer_4: "Mario Vargas Llosa",
-    right_answer: 3,
-  },
-  {
-    question: "What is the main setting of Homer's 'Odyssey'?",
-    answer_1: "The Trojan War",
-    answer_2: "Odysseus' journey home",
-    answer_3: "The founding of Rome",
-    answer_4: "The underworld",
-    right_answer: 2,
-  },
-  {
-    question: "Who wrote the play 'Faust'?",
-    answer_1: "Friedrich Schiller",
-    answer_2: "Heinrich Heine",
-    answer_3: "Johann Wolfgang von Goethe",
-    answer_4: "Gotthold Ephraim Lessing",
-    right_answer: 3,
-  },
-  {
-    question: "Which of these is NOT a type of novel?",
-    answer_1: "Bildungsroman",
-    answer_2: "Epistolary",
-    answer_3: "Stream of consciousness",
-    answer_4: "Sonnet",
-    right_answer: 4,
-  },
-  {
-    question: "Who wrote 'The Little Prince'?",
-    answer_1: "Jules Verne",
-    answer_2: "Victor Hugo",
-    answer_3: "Antoine de Saint-Exupéry",
-    answer_4: "Albert Camus",
-    right_answer: 3,
-  },
-  {
-    question: "In Greek tragedy, what is 'hamartia'?",
-    answer_1: "The tragic hero's flaw",
-    answer_2: "The chorus's song",
-    answer_3: "The final resolution",
-    answer_4: "The comic relief",
-    right_answer: 1,
-  },
-  {
-    question: "Who wrote 'Pride and Prejudice'?",
-    answer_1: "Charlotte Brontë",
-    answer_2: "Emily Brontë",
-    answer_3: "Jane Austen",
-    answer_4: "Virginia Woolf",
-    right_answer: 3,
-  },
-  {
-    question:
-      "Which literary movement emphasized emotion and nature in the late 18th century?",
-    answer_1: "Realism",
-    answer_2: "Romanticism",
-    answer_3: "Modernism",
-    answer_4: "Naturalism",
-    right_answer: 2,
-  },
-  {
-    question: "Which author wrote '1984'?",
-    answer_1: "Aldous Huxley",
-    answer_2: "George Orwell",
-    answer_3: "H.G. Wells",
-    answer_4: "Ray Bradbury",
-    right_answer: 2,
-  },
-  {
-    question: "What is the primary language of 'One Thousand and One Nights'?",
-    answer_1: "Persian",
-    answer_2: "Turkish",
-    answer_3: "Arabic",
-    answer_4: "Hebrew",
-    right_answer: 3,
-  },
-  {
-    question: "Who wrote 'The Catcher in the Rye'?",
-    answer_1: "Ernest Hemingway",
-    answer_2: "J.D. Salinger",
-    answer_3: "F. Scott Fitzgerald",
-    answer_4: "William Faulkner",
-    right_answer: 2,
-  },
-  {
-    question: "Which of these authors was part of the 'Lost Generation'?",
-    answer_1: "Charles Dickens",
-    answer_2: "Ernest Hemingway",
-    answer_3: "Jane Austen",
-    answer_4: "Leo Tolstoy",
-    right_answer: 2,
-  },
-  {
-    question: "Who wrote 'The Metamorphosis'?",
-    answer_1: "Thomas Mann",
-    answer_2: "Franz Kafka",
-    answer_3: "Robert Musil",
-    answer_4: "Arthur Schnitzler",
-    right_answer: 2,
-  },
-  {
-    question:
-      "What literary prize is awarded annually for the best English-language novel?",
-    answer_1: "Pulitzer Prize",
-    answer_2: "Nobel Prize in Literature",
-    answer_3: "Booker Prize",
-    answer_4: "National Book Award",
-    right_answer: 3,
-  },
-  {
-    question: "Which poet wrote 'The Pledge'?",
-    answer_1: "Heinrich Heine",
-    answer_2: "Friedrich Schiller",
-    answer_3: "Johann Wolfgang von Goethe",
-    answer_4: "Rainer Maria Rilke",
-    right_answer: 2,
-  },
-  {
-    question: "In 'Don Quixote', what does the protagonist mistake for giants?",
-    answer_1: "Sheep",
-    answer_2: "Windmills",
-    answer_3: "Castles",
-    answer_4: "Knights",
-    right_answer: 2,
-  },
-  {
-    question: "Who wrote 'Moby Dick'?",
-    answer_1: "Edgar Allan Poe",
-    answer_2: "Mark Twain",
-    answer_3: "Herman Melville",
-    answer_4: "Nathaniel Hawthorne",
-    right_answer: 3,
-  },
-  {
-    question: "Which of these is a characteristic of magical realism?",
-    answer_1: "Strict adherence to scientific facts",
-    answer_2: "Mythical elements in realistic settings",
-    answer_3: "Pure fantasy worlds",
-    answer_4: "Historical accuracy only",
-    right_answer: 2,
-  },
-  {
-    question: "Who wrote 'War and Peace'?",
-    answer_1: "Fyodor Dostoevsky",
-    answer_2: "Leo Tolstoy",
-    answer_3: "Anton Chekhov",
-    answer_4: "Ivan Turgenev",
-    right_answer: 2,
-  },
-  {
-    question: "What was the original language of 'The Divine Comedy'?",
-    answer_1: "Latin",
-    answer_2: "Italian",
-    answer_3: "French",
-    answer_4: "Greek",
-    right_answer: 2,
-  },
-  {
-    question: "Which author wrote 'The Name of the Rose'?",
-    answer_1: "Italo Calvino",
-    answer_2: "Umberto Eco",
-    answer_3: "Alberto Moravia",
-    answer_4: "Primo Levi",
-    right_answer: 2,
-  },
-  {
-    question: "Which literary term describes a play on words?",
-    answer_1: "Oxymoron",
-    answer_2: "Pun",
-    answer_3: "Euphemism",
-    answer_4: "Hyperbole",
-    right_answer: 2,
-  },
-  {
-    question: "Who wrote 'Alice in Wonderland'?",
-    answer_1: "J.M. Barrie",
-    answer_2: "Lewis Carroll",
-    answer_3: "Roald Dahl",
-    answer_4: "C.S. Lewis",
-    right_answer: 2,
-  },
-  {
-    question: "In which country did the haiku poetic form originate?",
-    answer_1: "China",
-    answer_2: "Korea",
-    answer_3: "Japan",
-    answer_4: "Vietnam",
-    right_answer: 3,
-  },
-  {
-    question: "Who wrote 'Buddenbrooks'?",
-    answer_1: "Heinrich Mann",
-    answer_2: "Thomas Mann",
-    answer_3: "Günter Grass",
-    answer_4: "Hermann Hesse",
-    right_answer: 2,
-  },
-  {
-    question: "What is the typical structure of a Shakespearean sonnet?",
-    answer_1: "8 lines followed by 6 lines",
-    answer_2: "12 lines of rhyming couplets",
-    answer_3: "Three quatrains and a couplet",
-    answer_4: "Four stanzas of equal length",
-    right_answer: 3,
-  },
-  {
-    question: "Which author wrote 'Ulysses'?",
-    answer_1: "Virginia Woolf",
-    answer_2: "James Joyce",
-    answer_3: "Samuel Beckett",
-    answer_4: "Oscar Wilde",
-    right_answer: 2,
-  },
-  {
-    question: "Which of these is NOT one of Aristotle's elements of tragedy?",
-    answer_1: "Plot",
-    answer_2: "Character",
-    answer_3: "Thought",
-    answer_4: "Rhyme",
-    right_answer: 4,
-  },
-  {
-    question: "Who wrote 'The Old Man and the Sea'?",
-    answer_1: "John Steinbeck",
-    answer_2: "Ernest Hemingway",
-    answer_3: "William Faulkner",
-    answer_4: "F. Scott Fitzgerald",
-    right_answer: 2,
-  },
-  {
-    question:
-      "What literary device involves an exaggerated statement not meant to be taken literally?",
-    answer_1: "Irony",
-    answer_2: "Metonymy",
-    answer_3: "Hyperbole",
-    answer_4: "Litotes",
-    right_answer: 3,
-  },
-  {
-    question: "Who wrote 'Crime and Punishment'?",
-    answer_1: "Leo Tolstoy",
-    answer_2: "Fyodor Dostoevsky",
-    answer_3: "Nikolai Gogol",
-    answer_4: "Anton Chekhov",
-    right_answer: 2,
-  },
-  {
-    question:
-      "Which century saw the rise of the novel as a popular literary form?",
-    answer_1: "16th century",
-    answer_2: "17th century",
-    answer_3: "18th century",
-    answer_4: "19th century",
-    right_answer: 3,
-  },
-  {
-    question: "Which poet wrote 'Duino Elegies'?",
-    answer_1: "Stefan George",
-    answer_2: "Hugo von Hofmannsthal",
-    answer_3: "Rainer Maria Rilke",
-    answer_4: "Georg Trakl",
-    right_answer: 3,
-  },
-  {
-    question: "What is the main theme of Kafka's 'The Metamorphosis'?",
-    answer_1: "Romantic love",
-    answer_2: "Alienation and absurdity",
-    answer_3: "Political revolution",
-    answer_4: "Religious conversion",
-    right_answer: 2,
-  },
-  {
-    question: "Who wrote 'Don Quixote'?",
-    answer_1: "Federico García Lorca",
-    answer_2: "Miguel de Cervantes",
-    answer_3: "Pablo Neruda",
-    answer_4: "Gabriel García Márquez",
-    right_answer: 2,
-  },
-  {
-    question: "Which of these is a famous epic poem from ancient India?",
-    answer_1: "The Iliad",
-    answer_2: "The Aeneid",
-    answer_3: "The Mahabharata",
-    answer_4: "Beowulf",
-    right_answer: 3,
-  },
-  {
-    question: "Who wrote 'The Sorrows of Young Werther'?",
-    answer_1: "Friedrich Schiller",
-    answer_2: "Johann Wolfgang von Goethe",
-    answer_3: "Heinrich von Kleist",
-    answer_4: "E.T.A. Hoffmann",
-    right_answer: 2,
-  },
+    "answer_1": "Metaphor",
+    "answer_2": "Simile",
+    "answer_3": "Personification",
+    "answer_4": "Alliteration",
+    "right_answer": 3,
+  }
+  
 ];
 
 
 let currentQuestion = 0;
 
 function init() {
-    document.getElementsById("all_questions").innerHTML = quiz_questions.length;
+  document.getElementsById("all_questions").innerHTML = quiz_questions.length;
+  showCurrentQuestion();
 }
 
 function showCurrentQuestion() {
-    let question = quiz_questions[currentQuestion];
+  
+
+  let question = quiz_questions[currentQuestion];
+
+  document.getElementById("questiontext").innerHTML = question['question'];
+  document.getElementById("answer_1").innerHTML = answer["answer_1"];
+  document.getElementById("answer_2").innerHTML = answer["answer_2"];
+  document.getElementById("answer_3").innerHTML = answer["answer_3"];
+  document.getElementById("answer_4").innerHTML = answer["answer_4"];
+  
 }

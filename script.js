@@ -1,58 +1,58 @@
-let quiz_questions = [
+let quiz-questions = [
 	{
 		"question": "In which century was Shakespeare born?",
-		"answer_1": "15th century",
-		"answer_2": "16th century",
-		"answer_3": "17th century",
-		"answer_4": "14th century",
-		"right_answer": 2,
+		"answer-1": "15th century",
+		"answer-2": "16th century",
+		"answer-3": "17th century",
+		"answer-4": "14th century",
+		"right-answer": 2,
 	},
 	{
 		"question": "Who wrote the novel 'The Trial'?",
-		"answer_1": "Thomas Mann",
-		"answer_2": "Franz Kafka",
-		"answer_3": "Hermann Hesse",
-		"answer_4": "Bertolt Brecht",
-		"right_answer": 2,
+		"answer-1": "Thomas Mann",
+		"answer-2": "Franz Kafka",
+		"answer-3": "Hermann Hesse",
+		"answer-4": "Bertolt Brecht",
+		"right-answer": 2,
 	},
 	{
 		"question":
 			"Which literary device involves giving human characteristics to non-human things?",
-		"answer_1": "Metaphor",
-		"answer_2": "Simile",
-		"answer_3": "Personification",
-		"answer_4": "Alliteration",
-		"right_answer": 3,
+		"answer-1": "Metaphor",
+		"answer-2": "Simile",
+		"answer-3": "Personification",
+		"answer-4": "Alliteration",
+		"right-answer": 3,
 	},
 ];
 
 let currentQuestion = 0;
 
 function init() {
-	document.getElementById("all_questions").innerHTML = quiz_questions.length;
+	document.getElementById("all-questions").innerHTML = quiz-questions.length;
 	showCurrentQuestion();
 }
 
 function showCurrentQuestion() {
-	let question = quiz_questions[currentQuestion];
+	let question = quiz-questions[currentQuestion];
 
 	document.getElementById("questiontext").innerHTML = question["question"];
-	document.getElementById("answer_1").innerHTML = question["answer_1"];
-	document.getElementById("answer_2").innerHTML = question["answer_2"];
-	document.getElementById("answer_3").innerHTML = question["answer_3"];
-	document.getElementById("answer_4").innerHTML = question["answer_4"];
+	document.getElementById("answer-1").innerHTML = question["answer-1"];
+	document.getElementById("answer-2").innerHTML = question["answer-2"];
+	document.getElementById("answer-3").innerHTML = question["answer-3"];
+	document.getElementById("answer-4").innerHTML = question["answer-4"];
 }
 
 function answer(selection) {
-	let question = quiz_questions[currentQuestion];
+	let question = quiz-questions[currentQuestion];
 	console.log("Selected answer is ", selection);
 	let selectedQuestionNumber = selection.slice(-1);
 	console.log("selectedQuestionNumber is ", selectedQuestionNumber);
-  console.log("Current question is ", question["right_answer"]);
+  console.log("Current question is ", question["right-answer"]);
   
-  let idOfRightAnswer = `answer_${question["right_answer"]}`;
+  let idOfRightAnswer = `answer-${question["right-answer"]}`;
 
-	if (selectedQuestionNumber == question["right_answer"]) {
+	if (selectedQuestionNumber == question["right-answer"]) {
 		console.log("Bravo! Das war richtig.");
 		document.getElementById(selection).parentNode.classList.add("bg-success");
 	} else {
@@ -60,17 +60,27 @@ function answer(selection) {
     document.getElementById(idOfRightAnswer).parentNode.classList.add("bg-success");
   }
   
-  document.getElementById("next_button").disabled = false;
+  document.getElementById("next-button").disabled = false;
 }
  
 
 function nextQuestion() {
   currentQuestion++;  //Hier wird die derzeitige Frage um eins erhöht
+  document.getElementById("next-button").disabled = true;
+  resetAnswerButtons();
   showCurrentQuestion();
 
-  document.getElementById("next_button").disabled = true;
-  document.getElementById(selection).parentNode.classList.add("bg-success").disabled = true;
-  document.getElementById(selection).parentNode.classList.add("bg-danger").disabled = true;
-  document.getElementById(idOfRightAnswer).parentNode.classList.add("bg-success").disabled = true;
 
+}
+
+function resetAnswerButtons() {
+
+  document.getElementById("answer-1").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer-1").parentNode.classList.remove("bg-success");
+  document.getElementById("answer-2").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer-2").parentNode.classList.remove("bg-success");
+  document.getElementById("answer-3").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer-3").parentNode.classList.remove("bg-success");
+  document.getElementById("answer-4").parentNode.classList.remove("bg-danger");
+  document.getElementById("answer-4").parentNode.classList.remove("bg-success");
 }
